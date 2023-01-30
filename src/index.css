@@ -1,0 +1,33 @@
+body {
+  font-family: "Inter", "sans-serif";
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  margin: 0px;
+  background: #21222a;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+.nav--title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #00d8ff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.nav--sub {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #deebf8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 30px;
+}
