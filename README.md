@@ -1,5 +1,5 @@
 # Novel-Navigator-vite
-Frontend for the Book Recommendation App: Novel Navigator
+Frontend for the Book Recommendation App: Novel Navigator.
 React App created with vite for faster development experience.
 
 **Dependencies**
