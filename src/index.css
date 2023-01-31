@@ -31,3 +31,7 @@ nav {
   text-align: center;
   margin-left: 30px;
 }
+
+.nav--sub:hover {
+  color: white;
+}
