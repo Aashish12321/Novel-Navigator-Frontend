@@ -87,3 +87,19 @@ nav {
   text-align: center;
   color: #1e1e1e;
 }
+
+.bookcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+  border: 5px solid black;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.bookcard--cover {
+  height: 180px;
+  width: 140px;
+}

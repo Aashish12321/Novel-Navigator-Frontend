@@ -1,5 +1,5 @@
 import React from "react";
-import readingBook from "../assets/images/reading-book.png";
+
 const Banner = () => {
   return (
     <div className="banner--body">
@@ -10,7 +10,7 @@ const Banner = () => {
           personalized recommendations for you, we have got you covered.
         </p>
       </div>
-      <img src={readingBook} className="promo-image"></img>
+      <img src="./assets/images/reading-book.png" className="promo-image"></img>
     </div>
   );
 };
