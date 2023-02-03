@@ -1,7 +1,13 @@
 import React from "react";
+import Header from "../components/Header";
 
 const sample = () => {
-  return <div>sample</div>;
+  return (
+    <>
+      <Header />
+      <p>sample..</p>
+    </>
+  );
 };
 
 export default sample;
