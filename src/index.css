@@ -79,3 +79,11 @@ nav {
   text-align: center;
   color: #1e1e1e;
 }
+
+.Recommendations--heading {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  color: #1e1e1e;
+}

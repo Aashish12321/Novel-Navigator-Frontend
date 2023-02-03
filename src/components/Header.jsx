@@ -13,9 +13,11 @@ const Header = () => {
           Top 50 Books
         </a>
       </Link>
-      <a href="#" className="nav--sub">
-        Get recommendations
-      </a>
+      <Link to="/recommendations" className="nav--link">
+        <a href="#" className="nav--sub">
+          Get recommendations
+        </a>
+      </Link>
       <a href="#" className="nav--sub">
         About
       </a>
