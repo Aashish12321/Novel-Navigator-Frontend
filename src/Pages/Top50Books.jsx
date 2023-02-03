@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
+import TopBooks from "../components/TopBooks";
 
-const sample = () => {
+const Top50Books = () => {
   return (
     <>
       <Header />
-      <p>sample..</p>
+      <TopBooks />
     </>
   );
 };
 
-export default sample;
+export default Top50Books;

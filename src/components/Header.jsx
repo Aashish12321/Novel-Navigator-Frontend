@@ -1,14 +1,18 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav>
-      <a href="#" className="nav--title">
-        Novel Navigator
-      </a>
-      <a href="#" className="nav--sub">
-        Top 50 Books
-      </a>
+      <Link to="/" className="nav--link">
+        <a href="#" className="nav--title">
+          Novel Navigator
+        </a>
+      </Link>
+      <Link to="/topbooks" className="nav--link">
+        <a href="#" className="nav--sub">
+          Top 50 Books
+        </a>
+      </Link>
       <a href="#" className="nav--sub">
         Get recommendations
       </a>

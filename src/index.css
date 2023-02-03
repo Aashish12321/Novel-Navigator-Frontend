@@ -2,7 +2,6 @@ body {
   font-family: "Inter", "sans-serif";
   margin: 0px;
   padding: 0px;
-  background: #1e1e1e;
 }
 
 nav {
@@ -32,11 +31,15 @@ nav {
   text-align: center;
   margin-left: 30px;
 }
+.nav--link {
+  text-decoration: none;
+}
 
 .nav--sub:hover {
   color: white;
 }
 .banner--body {
+  background: #1e1e1e;
   display: flex;
 }
 .promo-text {
@@ -67,4 +70,12 @@ nav {
   height: 915px;
   border-radius: 5px;
   margin-right: 20px;
+}
+
+.TopBooks--heading {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  color: #1e1e1e;
 }

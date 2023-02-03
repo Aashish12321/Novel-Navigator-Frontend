@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/Homepage";
-import Sample from "./Pages/Sample";
+import Top50Books from "./Pages/Top50Books";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
-        <Route path="/about" element={<Sample />}></Route>
+        <Route path="/topbooks" element={<Top50Books />}></Route>
       </Routes>
     </BrowserRouter>
   );
