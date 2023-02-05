@@ -5,8 +5,10 @@ const BookCard = (props) => {
     <div className="bookcard">
       <img className="bookcard--cover" src={props.image_url}></img>
       <p>{props.title}</p>
-      <p>{props.language}</p>
-      <p>{props.year}</p>
+      <div style={{ fontWeight: "500" }}>
+        <p>{props.language}</p>
+        <p>{props.year}</p>
+      </div>
     </div>
   );
 };
