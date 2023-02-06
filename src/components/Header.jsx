@@ -18,11 +18,12 @@ const Header = () => {
           Get recommendations
         </a>
       </Link>
-      <a href="#" className="nav--sub">
-        About
-      </a>
+      <Link to="/about" className="nav--link">
+        <a href="#" className="nav--sub">
+          About
+        </a>
+      </Link>
     </nav>
   );
 };
-
 export default Header;

@@ -113,3 +113,33 @@ nav {
   justify-content: space-between;
   grid-template-columns: auto auto auto auto;
 }
+/* css for Login component */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.login-form--username {
+  width: 40%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-form--password {
+  width: 40%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.login-form--button {
+  width: 40%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}

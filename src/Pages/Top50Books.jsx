@@ -11,10 +11,11 @@ const Top50Books = () => {
         title={element.title}
         language={element.language}
         year={element.year}
-        image_url={`../../public/assets/${element.imageLink}`}
+        image_url={`../assets/${element.imageLink}`}
       />
     );
   });
+
   return (
     <>
       <Header />
