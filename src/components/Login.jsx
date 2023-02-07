@@ -1,19 +1,30 @@
 import React from "react";
+import axios from "axios";
 
 const Login = () => {
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [data, setData] = React.useState({
+    username: "",
+    password: "",
+  });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = {
-      username: { username },
-      password: { password },
-    };
+    axios
+      .post("http://127.0.0.1:5000/login", data)
+      .then((resp) => console.log(resp))
+      .catch((error) => console.log(error));
 
-    console.log(data);
-    setUsername("");
-    setPassword("");
+    setData({
+      username: "",
+      password: "",
+    });
   };
 
   return (
@@ -23,18 +34,18 @@ const Login = () => {
           className="login-form--username"
           type="text"
           name="username"
-          value={username}
+          value={data.username}
           placeholder="Username"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={handleChange}
           required
         ></input>
         <input
           className="login-form--password"
           type="password"
           name="password"
-          value={password}
+          value={data.password}
           placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleChange}
           required
         ></input>
         <button className="login-form--button">Submit</button>

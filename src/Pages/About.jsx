@@ -17,7 +17,7 @@ const About = () => {
         highest level of value. Whether you are an individual customer or
         company, we are here to help.
       </p>
-      <footer>Made with &#x2764; by SoftAi </footer>
+      <footer>Made with {"\u2764"} by SoftAi</footer>
     </div>
   );
 };
