@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <p>
+      <p className="about--text">
         About Us:
         <br />
         SoftAi is a technology company that is dedicated to make the world a
@@ -17,6 +17,7 @@ const About = () => {
         highest level of value. Whether you are an individual customer or
         company, we are here to help.
       </p>
+      <footer>Made with &#x2764; by SoftAi </footer>
     </div>
   );
 };
