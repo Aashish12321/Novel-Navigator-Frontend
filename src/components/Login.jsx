@@ -17,7 +17,7 @@ const Login = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault;
     const url = "http://127.0.0.1:5000/login";
     axios.post(url, data).then((res) => {
       if (res.status === 200) {

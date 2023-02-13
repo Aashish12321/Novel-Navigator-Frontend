@@ -10,7 +10,10 @@ const Banner = () => {
           personalized recommendations for you, we have got you covered.
         </p>
       </div>
-      <img src="./assets/images/reading-book.png" className="promo-image"></img>
+      <img
+        src="src/assets/images/reading-book.png"
+        className="promo-image"
+      ></img>
     </div>
   );
 };
