@@ -17,11 +17,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/topbooks" element={<Top50Books />}></Route>
-
-        {/* <Route
-            path="/recommendations"
-            element={<GetRecommedations />}
-          ></Route> */}
         <Route
           path="/recommendations"
           element={

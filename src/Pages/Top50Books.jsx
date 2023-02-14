@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import TopBooksTitle from "../components/TopBooksTitle";
 import BookCard from "../components/BookCard";
 import BookData from "../assets/books.json";
 
@@ -19,7 +18,7 @@ const Top50Books = () => {
   return (
     <>
       <Header />
-      <TopBooksTitle />
+      <p className="TopBooks--heading mt-4">Top 50 Books</p>
       <div className="book-container">{bookElements}</div>
     </>
   );

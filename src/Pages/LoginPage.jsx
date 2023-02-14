@@ -8,7 +8,7 @@ const LoginPage = () => {
   return (
     <div>
       <Header />
-      {isAuthenticated() ? "You are logged in" : <Login />}
+      <Login />
     </div>
   );
 };

@@ -4,10 +4,10 @@ import Banner from "../components/Banner";
 
 const Homepage = () => {
   return (
-    <>
+    <div>
       <Header />
       <Banner />
-    </>
+    </div>
   );
 };
 
