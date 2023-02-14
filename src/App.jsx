@@ -8,6 +8,7 @@ import Top50Books from "./Pages/Top50Books";
 import About from "./Pages/About";
 import RegisterPage from "./Pages/RegisterPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import RecommendationsUnauth from "./components/RecommendationsUnauth";
 
 function App() {
   const isAuthenticated = useIsAuthenticated();
@@ -24,7 +25,11 @@ function App() {
         <Route
           path="/recommendations"
           element={
-            isAuthenticated() ? <GetRecommedations /> : "please log in first"
+            isAuthenticated() ? (
+              <GetRecommedations />
+            ) : (
+              <RecommendationsUnauth />
+            )
           }
         ></Route>
         <Route path="/about" element={<About />}></Route>

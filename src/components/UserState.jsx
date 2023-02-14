@@ -11,13 +11,13 @@ const UserState = (props) => {
     navigate("/login");
   };
   return (
-    <div>
+    <div className="nav--login">
       {isAuthenticated() ? (
-        <button className="nav--login" onClick={logout}>
-          Logout
+        <button className="nav--logout p-1" onClick={logout}>
+          LogOut
         </button>
       ) : (
-        <Link to="/login" className="nav--login nav--link">
+        <Link to="/login" className="nav--login">
           Login
         </Link>
       )}
