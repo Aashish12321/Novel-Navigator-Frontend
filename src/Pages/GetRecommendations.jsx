@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Recommendations from "../components/Recommendations";
 
-const GetRecommedations = () => {
+const GetRecommendations = () => {
   return (
     <div>
       <Header />
@@ -11,4 +11,4 @@ const GetRecommedations = () => {
   );
 };
 
-export default GetRecommedations;
+export default GetRecommendations;

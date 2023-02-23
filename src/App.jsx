@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useIsAuthenticated } from "react-auth-kit";
-import GetRecommedations from "./Pages/GetRecommedations";
+import GetRecommendations from "./Pages/GetRecommendations";
 import Homepage from "./Pages/Homepage";
 import LoginPage from "./Pages/LoginPage";
 import Top50Books from "./Pages/Top50Books";
@@ -21,7 +21,7 @@ function App() {
           path="/recommendations"
           element={
             isAuthenticated() ? (
-              <GetRecommedations />
+              <GetRecommendations />
             ) : (
               <RecommendationsUnauth />
             )

@@ -3,6 +3,7 @@ import { AuthProvider } from "react-auth-kit";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import { CookiesProvider } from "react-cookie";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,7 +13,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       cookieDomain={window.location.hostname}
       cookieSecure={window.location.protocol === "https:"}
     >
-      <App />
+      <CookiesProvider>
+        <App />
+      </CookiesProvider>
     </AuthProvider>
   </React.StrictMode>
 );
