@@ -1,5 +1,4 @@
 import React from "react";
-import { useCookies } from "react-cookie";
 import { useFormik } from "formik";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
@@ -37,11 +36,10 @@ const Recommendations = () => {
         BookName={element.title}
         ratings={element.ratings}
         image_url={element.cover_image}
+        book_id={element.book_id}
       />
     );
   });
-  // const [cookies, setCookies] = useCookies([""]);
-  // const current_user = cookies._auth_state.username;
   return (
     <div>
       <h1 className=" fs-3 p-5">

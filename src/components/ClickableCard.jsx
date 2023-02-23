@@ -1,10 +1,32 @@
 import React from "react";
+import axios from "axios";
+import { useCookies } from "react-cookie";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ClickableCard = (props) => {
+  const book_id = props.book_id;
+
+  const [cookies, setCookies] = useCookies([""]);
+  const current_user = cookies._auth_state.username;
+  function addToLiked() {
+    const url = "http://127.0.0.1:5000/add_book";
+    const data = {
+      book_id: book_id,
+      username: current_user,
+    };
+    axios
+      .post(url, data)
+      .then(function (response) {
+        console.log(response.data);
+        alert(response.data.message);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
   return (
-    <div className="p-3">
+    <div className="p-3 clickable-card">
       <Card style={{ width: "16rem" }}>
         <Card.Img
           variant="top"
@@ -14,7 +36,9 @@ const ClickableCard = (props) => {
         <Card.Body>
           <Card.Title>{props.BookName}</Card.Title>
           <Card.Text>Ratings : {props.ratings}</Card.Text>
-          <Button variant="dark">Add to liked books</Button>
+          <Button onClick={addToLiked} variant="dark">
+            Add to liked books
+          </Button>
         </Card.Body>
       </Card>
     </div>
