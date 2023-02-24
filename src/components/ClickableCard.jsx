@@ -26,7 +26,7 @@ const ClickableCard = (props) => {
       });
   }
   return (
-    <div className="p-3 clickable-card">
+    <div className="p-1 clickable-card">
       <Card style={{ width: "16rem" }}>
         <Card.Img
           variant="top"

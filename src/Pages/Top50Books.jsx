@@ -1,16 +1,25 @@
 import React from "react";
 import Header from "../components/Header";
 import BookCard from "../components/BookCard";
-import BookData from "../assets/books.json";
+import axios from "axios";
 
 const Top50Books = () => {
-  const bookElements = BookData.map(function (element) {
+  const [topBookData, setTopBookData] = React.useState([]);
+  const url = "http://127.0.0.1:5000/top50books";
+  const fetchdata = async () => {
+    const res = await axios.get(url);
+    // console.log(res.data);
+    setTopBookData(res.data);
+  };
+  React.useEffect(() => {
+    fetchdata();
+  }, []);
+  const bookElements = topBookData.map(function (element) {
     return (
       <BookCard
-        title={element.title}
-        language={element.language}
-        year={element.year}
-        image_url={`src/assets/${element.imageLink}`}
+        BookName={element.title}
+        ratings={element.ratings}
+        image_url={element.cover_image}
       />
     );
   });
