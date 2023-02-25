@@ -1,19 +1,18 @@
 import React from "react";
 import axios from "axios";
-import { useCookies } from "react-cookie";
+import { useAuthUser } from "react-auth-kit";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ClickableCard = (props) => {
   const book_id = props.book_id;
+  const auth = useAuthUser();
 
-  const [cookies, setCookies] = useCookies([""]);
-  const current_user = cookies._auth_state.username;
   function addToLiked() {
-    const url = "http://127.0.0.1:5000/add_book";
+    const url = "http://127.0.0.1:5000/addbook";
     const data = {
       book_id: book_id,
-      username: current_user,
+      username: auth().username,
     };
     axios
       .post(url, data)

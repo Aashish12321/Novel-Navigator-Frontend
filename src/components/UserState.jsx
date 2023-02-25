@@ -2,7 +2,7 @@ import React from "react";
 import { useSignOut, useIsAuthenticated } from "react-auth-kit";
 import { Link, useNavigate } from "react-router-dom";
 
-const UserState = (props) => {
+const UserState = () => {
   const signOut = useSignOut();
   const navigate = useNavigate();
   const isAuthenticated = useIsAuthenticated();
@@ -11,10 +11,10 @@ const UserState = (props) => {
     navigate("/login");
   };
   return (
-    <div className="nav--login">
+    <div className="login--container">
       {isAuthenticated() ? (
-        <button className="nav--logout p-1" onClick={logout}>
-          LogOut
+        <button className="nav--logout" onClick={logout}>
+          Logout
         </button>
       ) : (
         <Link to="/login" className="nav--login">

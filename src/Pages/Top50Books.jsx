@@ -8,12 +8,13 @@ const Top50Books = () => {
   const url = "http://127.0.0.1:5000/top50books";
   const fetchdata = async () => {
     const res = await axios.get(url);
-    // console.log(res.data);
     setTopBookData(res.data);
   };
+
   React.useEffect(() => {
     fetchdata();
   }, []);
+
   const bookElements = topBookData.map(function (element) {
     return (
       <BookCard

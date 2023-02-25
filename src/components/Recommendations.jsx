@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import ClickableCard from "./ClickableCard";
 
