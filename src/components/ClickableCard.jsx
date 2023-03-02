@@ -34,7 +34,7 @@ const ClickableCard = (props) => {
         />
         <Card.Body>
           <Card.Title>{props.BookName}</Card.Title>
-          <Card.Text>Ratings : {props.ratings}</Card.Text>
+          <Card.Text>Author : {props.Author}</Card.Text>
           <Button onClick={addToLiked} variant="dark">
             Add to liked books
           </Button>

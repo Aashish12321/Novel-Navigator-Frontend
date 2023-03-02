@@ -34,9 +34,9 @@ const Recommendations = () => {
     return (
       <ClickableCard
         BookName={element.title}
-        ratings={element.ratings}
-        image_url={element.cover_image}
-        book_id={element.book_id}
+        Author={element.author}
+        image_url={element.image}
+        book_id={element.ISBN}
       />
     );
   });
