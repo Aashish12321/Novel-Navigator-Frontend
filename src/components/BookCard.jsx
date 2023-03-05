@@ -12,7 +12,7 @@ const BookCard = (props) => {
         />
         <Card.Body>
           <Card.Title>{props.BookName}</Card.Title>
-          <Card.Text>Ratings: {props.ratings}</Card.Text>
+          <Card.Text>Author:{props.author}</Card.Text>
         </Card.Body>
       </Card>
     </div>
