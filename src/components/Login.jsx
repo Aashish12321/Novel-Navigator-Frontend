@@ -1,12 +1,16 @@
-import React from "react";
+import { Button, TextField } from "@mui/material";
 import axios from "axios";
-import { useSignIn } from "react-auth-kit";
 import { useFormik } from "formik";
-import { Form, Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useSignIn } from "react-auth-kit";
+import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
+  const toRegister = () => {
+    navigate("/register");
+  };
   const [showError, setShowError] = React.useState(false);
   const signIn = useSignIn();
   const formik = useFormik({
@@ -47,46 +51,60 @@ const Login = () => {
   });
 
   return (
-    <div className="w-50 p-5">
-      <h1 className="mb-4">Welcome to Login Page.</h1>
-      {showError ? (
-        <p className="text-danger">
-          Invalid Username or Password. Please Try again.
-        </p>
-      ) : (
-        ""
-      )}
-      <Form onSubmit={formik.handleSubmit}>
-        <Form.Group className="mb-3">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter Username"
-            name="username"
-            onChange={formik.handleChange}
-            value={formik.values.username}
-            required
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Enter password"
-            name="password"
-            onChange={formik.handleChange}
-            value={formik.values.password}
-          ></Form.Control>
-        </Form.Group>
-        <Button type="submit" size="lg">
-          Log In!
-        </Button>
-      </Form>
+    <div className="login-bg">
+      <div className="w-50 p-5">
+        <h1 className="mb-4">Welcome to Login Page.</h1>
+        {showError ? (
+          <p className="text-danger">
+            Invalid Username or Password. Please Try again.
+          </p>
+        ) : (
+          ""
+        )}
+        <Form onSubmit={formik.handleSubmit}>
+          <Form.Group className="mb-3">
+            <TextField
+              fullWidth
+              label="Username"
+              variant="outlined"
+              placeholder="Enter Username"
+              name="username"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+              required
+            ></TextField>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <TextField
+              fullWidth
+              label="Password"
+              variant="outlined"
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              required
+            ></TextField>
+          </Form.Group>
+          <Button variant="contained" type="submit" size="large">
+            Log In!
+          </Button>
+        </Form>
 
-      <h3 className="mt-5 mb-4">First time? Do register Now!</h3>
-      <Link to="/register" className="btn btn-info btn-lg text-white">
+        <h3 className="mt-5 mb-4">First time? Do register Now!</h3>
+        {/* <Link to="/register" className="btn btn-info btn-lg text-white">
         Register
-      </Link>
+      </Link> */}
+        <Button
+          variant="contained"
+          color="secondary"
+          size="large"
+          onClick={toRegister}
+        >
+          Register
+        </Button>
+      </div>
     </div>
   );
 };

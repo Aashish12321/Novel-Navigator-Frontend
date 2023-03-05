@@ -1,6 +1,7 @@
 import React from "react";
 import { useSignOut, useIsAuthenticated } from "react-auth-kit";
 import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const UserState = () => {
   const signOut = useSignOut();
@@ -10,16 +11,20 @@ const UserState = () => {
     signOut();
     navigate("/login");
   };
+
+  const login = () => {
+    navigate("/login");
+  };
   return (
     <div className="login--container">
       {isAuthenticated() ? (
-        <button className="nav--logout" onClick={logout}>
+        <Button onClick={logout} className="nav--login" variant="contained">
           Logout
-        </button>
+        </Button>
       ) : (
-        <Link to="/login" className="nav--login">
+        <Button onClick={login} className="nav--login" variant="contained">
           Login
-        </Link>
+        </Button>
       )}
     </div>
   );
