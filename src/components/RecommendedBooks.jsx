@@ -35,7 +35,15 @@ const RecommendedBooks = () => {
   return (
     <div>
       {recBooks.length === 0 ? (
-        <p>Loading your recommendations, please wait</p>
+        <h1
+          style={{
+            textAlign: "center",
+            fontFamily: "Karla",
+            fontWeight: "bold",
+          }}
+        >
+          Loading Your Recommendations, Please Wait..
+        </h1>
       ) : (
         <div className="book-container">{recElements}</div>
       )}

@@ -8,16 +8,17 @@ const About = () => {
       <p className="about--text">
         About Us:
         <br />
-        SoftAi is a technology company that is dedicated to make the world a
-        better place by integrating AI into our daily lives. Our mission is to
-        improve lives by offering AI solutions to a number of problems.
+        We are Computer Engineering Students currently enrolled in 3rd year (as
+        of 2023).
         <br />
-        Our team of experts, with 10+ of combined experience in the tech
-        industry, is dedicated to ensuring that our customers receive the
-        highest level of value. Whether you are an individual customer or
-        company, we are here to help.
+        This project has been done for fulfillment of Minor Project to be done
+        in 3rd year by Computer Engineering Students. The purpose of this
+        project is to create a simplistic recommendation system for Book Lovers.
+        Rather than reading what is popular, avid readers can provide us with a
+        list of their previously liked books and we provide with recommendations
+        to suit their taste.
       </p>
-      <footer>Made with ❤️ by SoftAi</footer>
+      <footer>Made with ❤️ by Aashish Sah and Ashwini Mandal</footer>
     </div>
   );
 };
