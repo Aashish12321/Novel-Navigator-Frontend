@@ -1,7 +1,8 @@
-import React from "react";
-import { useFormik } from "formik";
-import { Form, Button } from "react-bootstrap";
+import { TextField, Button } from "@mui/material";
 import axios from "axios";
+import { useFormik } from "formik";
+import React from "react";
+import { Form } from "react-bootstrap";
 import ClickableCard from "./ClickableCard";
 
 const Recommendations = () => {
@@ -34,7 +35,7 @@ const Recommendations = () => {
     return (
       <ClickableCard
         BookName={element.title}
-        Author={element.author}
+        author={element.author}
         image_url={element.image}
         book_id={element.ISBN}
       />
@@ -42,26 +43,24 @@ const Recommendations = () => {
   });
   return (
     <div>
-      <h1 className=" fs-3 p-5">
-        Search for favorite books to add them to your liked books and get
-        recommendations accordingly.
-      </h1>
       <div className="w-50 p-5">
+        <h1 className="mb-3" style={{ fontFamily: "Karla" }}>
+          Search for and add your favorite books.
+        </h1>
         <Form onSubmit={formik.handleSubmit}>
           <Form.Group className="mb-3">
-            <Form.Label className="mb-3 fs-3">
-              Search for your Favorite Book.
-            </Form.Label>
-            <Form.Control
-              type="text"
+            <TextField
+              fullWidth
+              label="Book Name"
+              variant="standard"
               placeholder="Enter Book Name"
               name="book_title"
               onChange={formik.handleChange}
               value={formik.values.book_title}
               required
-            ></Form.Control>
+            ></TextField>
           </Form.Group>
-          <Button type="submit" variant="dark" size="lg">
+          <Button type="submit" variant="contained" size="large" fullWidth>
             Search Now!
           </Button>
         </Form>

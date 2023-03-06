@@ -1,8 +1,7 @@
-import React from "react";
 import axios from "axios";
+import React from "react";
 import { useAuthUser } from "react-auth-kit";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Button } from "@mui/material";
 
 const ClickableCard = (props) => {
   const book_id = props.book_id;
@@ -25,21 +24,15 @@ const ClickableCard = (props) => {
       });
   }
   return (
-    <div className="p-1 clickable-card">
-      <Card style={{ width: "16rem" }}>
-        <Card.Img
-          variant="top"
-          className="bookcard--cover"
-          src={props.image_url}
-        />
-        <Card.Body>
-          <Card.Title>{props.BookName}</Card.Title>
-          <Card.Text>Author : {props.Author}</Card.Text>
-          <Button onClick={addToLiked} variant="dark">
-            Add to liked books
-          </Button>
-        </Card.Body>
-      </Card>
+    <div className="card--container">
+      <div>
+        <img className="card--image" src={props.image_url}></img>
+      </div>
+      <h5 className="mt-2 p-2 card--title">{props.BookName}</h5>
+      <h5 className="p-2 card--author">Author: {props.author}</h5>
+      <Button className="mb-3" variant="contained" onClick={addToLiked}>
+        Add to My Liked
+      </Button>
     </div>
   );
 };
