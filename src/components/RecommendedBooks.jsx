@@ -1,8 +1,7 @@
 import React from "react";
 import { useAuthUser } from "react-auth-kit";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
-import BookCard from "./BookCard";
+import BookCardWithAuthor from "./BookCardWithAuthor";
 
 const RecommendedBooks = () => {
   const [recBooks, setRecBooks] = React.useState([]);
@@ -25,7 +24,7 @@ const RecommendedBooks = () => {
   }, []);
   const recElements = recBooks.map((element) => {
     return (
-      <BookCard
+      <BookCardWithAuthor
         BookName={element.title}
         author={element.author}
         image_url={element.image}
