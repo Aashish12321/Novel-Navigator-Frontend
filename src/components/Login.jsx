@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Button, Paper, TextField } from "@mui/material";
 import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
@@ -52,59 +52,59 @@ const Login = () => {
 
   return (
     <div className="login-bg">
-      <div className="w-50 p-5">
-        <h1 className="mb-4">Welcome to Login Page.</h1>
-        {showError ? (
-          <p className="text-danger">
-            Invalid Username or Password. Please Try again.
-          </p>
-        ) : (
-          ""
-        )}
-        <Form onSubmit={formik.handleSubmit}>
-          <Form.Group className="mb-3">
-            <TextField
-              fullWidth
-              label="Username"
-              variant="outlined"
-              placeholder="Enter Username"
-              name="username"
-              onChange={formik.handleChange}
-              value={formik.values.username}
-              required
-            ></TextField>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <TextField
-              fullWidth
-              label="Password"
-              variant="outlined"
-              type="password"
-              placeholder="Enter Password"
-              name="password"
-              onChange={formik.handleChange}
-              value={formik.values.password}
-              required
-            ></TextField>
-          </Form.Group>
-          <Button variant="contained" type="submit" size="large">
-            Log In!
-          </Button>
-        </Form>
+      <Paper elevation={20} className="paper--container">
+        <div className="p-3">
+          <h2 className="mb-4">Login Page</h2>
+          {showError ? (
+            <p className="text-danger">
+              Invalid Username or Password. Please Try again.
+            </p>
+          ) : (
+            ""
+          )}
+          <Form onSubmit={formik.handleSubmit}>
+            <Form.Group className="mb-3">
+              <TextField
+                fullWidth
+                label="Username"
+                variant="standard"
+                placeholder="Enter Username"
+                name="username"
+                onChange={formik.handleChange}
+                value={formik.values.username}
+                required
+              ></TextField>
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <TextField
+                fullWidth
+                label="Password"
+                variant="standard"
+                type="password"
+                placeholder="Enter Password"
+                name="password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                required
+              ></TextField>
+            </Form.Group>
+            <Button variant="contained" type="submit" size="large" fullWidth>
+              Log In!
+            </Button>
+          </Form>
 
-        <h3 className="mt-5 mb-4">First time? Do register Now!</h3>
-        {/* <Link to="/register" className="btn btn-info btn-lg text-white">
-        Register
-      </Link> */}
-        <Button
-          variant="contained"
-          color="secondary"
-          size="large"
-          onClick={toRegister}
-        >
-          Register
-        </Button>
-      </div>
+          <h4 className="mt-5 mb-4">First time? Do register Now!</h4>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            onClick={toRegister}
+            fullWidth
+          >
+            Register
+          </Button>
+        </div>
+      </Paper>
     </div>
   );
 };

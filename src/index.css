@@ -44,11 +44,19 @@ nav {
   text-decoration: none;
 }
 
-.login-bg {
-  background-image: url("./assets/images/login-page.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+/* .login-bg {
+  /* margin: 0px;
+  background: url("./assets/images/login-page.jpg") no-repeat center center
+    fixed;
+  background-size: cover; 
+}*/
+.paper--container {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  height: 70vh;
+  margin: 50px auto;
+  align-items: center;
 }
 .login--container {
   margin-left: auto;
