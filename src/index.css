@@ -11,7 +11,11 @@ nav {
   height: 90px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
+
 .nav--title {
   font-weight: 800;
   font-size: 40px;
