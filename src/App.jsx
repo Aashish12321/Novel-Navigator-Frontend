@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import RegisterPage from "./Pages/RegisterPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RecommendationsUnauth from "./components/RecommendationsUnauth";
+import Search from "./Pages/Search";
 
 function App() {
   const isAuthenticated = useIsAuthenticated();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
+        <Route path="/search" element={<Search />}></Route>
       </Routes>
     </BrowserRouter>
   );

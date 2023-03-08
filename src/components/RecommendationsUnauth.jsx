@@ -5,7 +5,7 @@ const RecommendationsUnauth = () => {
   return (
     <div>
       <Header />
-      <h1 className="p-5 text-dark">
+      <h1 className="p-5" style={{ fontFamily: "Karla", textAlign: "center" }}>
         You Need to Login first to get personalized recommendations.
       </h1>
     </div>

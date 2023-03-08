@@ -34,6 +34,7 @@ const RecommendedBooks = () => {
 
   return (
     <div>
+      <p className="Recommendations--heading p-5">Books tailored for you!</p>
       {recBooks.length === 0 ? (
         <h1
           style={{

@@ -3,10 +3,27 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
 import { Form } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 import ClickableCard from "./ClickableCard";
 
 const Recommendations = () => {
   const [bookData, setBookData] = React.useState([]);
+  const { state } = useLocation();
+  React.useEffect(() => {
+    const url = "http://127.0.0.1:5000/search";
+    const data = {
+      book_title: state,
+    };
+    axios
+      .post(url, data)
+      .then(function (response) {
+        console.log(response.data);
+        setBookData(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, [state]);
   //handling forms using formik
   const formik = useFormik({
     initialValues: {
@@ -66,7 +83,6 @@ const Recommendations = () => {
         </Form>
       </div>
       <div className="book-container">{bookElements}</div>
-      <p className="Recommendations--heading p-5">Books tailored for you!</p>
     </div>
   );
 };

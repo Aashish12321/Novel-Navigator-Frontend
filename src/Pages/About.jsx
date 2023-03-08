@@ -18,7 +18,7 @@ const About = () => {
         list of their previously liked books and we provide with recommendations
         to suit their taste.
       </p>
-      <footer>Made with ❤️ by Aashish Sah and Ashwini Mandal</footer>
+      <footer>Made with ❤️ by Aashish and Ashwini </footer>
     </div>
   );
 };

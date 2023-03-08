@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 import UserState from "./UserState";
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
         to="/recommendations"
         className="nav--link nav--sub hover-underline-animation"
       >
-        Get recommendations
+        For me
       </Link>
       <Link
         to="/about"
@@ -25,6 +26,7 @@ const Header = () => {
       >
         About
       </Link>
+      <SearchBar />
       <UserState />
     </nav>
   );
