@@ -1,9 +1,8 @@
-import axios from "axios";
+import { TextField } from "@mui/material";
 import { useFormik } from "formik";
 import React from "react";
-import { Form, FormFloating } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { TextField } from "@mui/material";
 
 const SearchBar = () => {
   const navigate = useNavigate();
@@ -13,18 +12,6 @@ const SearchBar = () => {
     },
     onSubmit: (event) => {
       event.preventDefault;
-      //   const url = "http://127.0.0.1:5000/search";
-      //   const data = {
-      //     book_title: formik.values.book_title,
-      //   };
-      //   axios
-      //     .post(url, data)
-      //     .then(function (response) {
-      //       console.log(response.data);
-      //     })
-      //     .catch(function (error) {
-      //       console.log(error);
-      //     });
       if (formik.values.book_title) {
         navigate("/search", { state: formik.values.book_title, replace: true });
       }
