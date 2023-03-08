@@ -32,7 +32,7 @@ const SearchBar = () => {
     },
   });
   return (
-    <div>
+    <div className="searchbar">
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group>
           <TextField
@@ -41,6 +41,7 @@ const SearchBar = () => {
             name="book_title"
             onChange={formik.handleChange}
             value={formik.values.book_title}
+            inputProps={{ style: { color: "#fff" } }}
           ></TextField>
         </Form.Group>
       </Form>

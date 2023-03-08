@@ -59,9 +59,13 @@ nav {
   margin-right: 25px;
   height: 25px;
 }
+.searchbar {
+  margin-left: 650px;
+  /* margin-right: 20px; */
+}
 .nav--login {
   width: 120px;
-  margin-left: auto;
+  margin-left: 25px;
   margin-right: 25px;
 }
 .hover-underline-animation {
@@ -204,4 +208,9 @@ footer {
   height: 35px;
   background: #21222a;
   width: 100%;
+}
+
+/* material UI customizations */
+.MuiInput-root {
+  border-bottom: 1px solid whitesmoke !important;
 }
