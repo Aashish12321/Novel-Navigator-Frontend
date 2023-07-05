@@ -9,4 +9,3 @@ React App created with vite for faster development experience.
 **Run Dev**
 - 'cd' into the project directory
 - run ' yarn run dev'
-
